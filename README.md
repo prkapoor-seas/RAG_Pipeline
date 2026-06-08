@@ -79,15 +79,15 @@ Source URLs are extracted **programmatically** from chunk metadata before the LL
 
 ## Evaluation Report
 
-All five test questions were run through the live pipeline. Questions 1, 2, 4, and 5 used `llama-3.1-8b-instant` (Groq) due to the daily token quota on `llama-3.3-70b-versatile` being exhausted during iterative development. Question 3 was tested with `llama-3.3-70b-versatile` during earlier development sessions; that result is recorded below. The retrieval pipeline (embeddings, ChromaDB, URL boost map) is identical in both cases.
+All five test questions were run through the live pipeline using `llama-3.3-70b-versatile` on Groq. The retrieval pipeline uses `all-MiniLM-L6-v2` embeddings, ChromaDB cosine similarity search, and a keyword-triggered URL boost map.
 
 | #   | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
 | --- | -------- | --------------- | ---------------------------- | ----------------- | ----------------- |
-| 1   | What are the sector requirements in the UPenn College curriculum? | Describes all 7 sectors by name and states one course per sector is required | States that students must take one course in each of 7 sectors (correct count) but does not list the individual sector names, despite those chunks being present in the retrieved context | Relevant — URL boost correctly surfaced all sectors-of-knowledge page chunks | Partially accurate |
-| 2   | Is Writing required as part of the Penn College curriculum? | Yes, describes the Writing Seminar requirement | "Yes, writing is required. Students must take a writing seminar to fulfill the College's Writing Requirement. It is also recommended that students take this course during their first year." | Relevant | Accurate |
-| 3   | How many courses are required to graduate from UPenn with a BA in economics? | 28 A&S C.U. and 32 total C.U. (per planning.md) | "29 A&S C.U. and 36 total C.U. Since 1 C.U. = 1 course, that is 29 A&S courses and 36 total courses." | Relevant — URL boost surfaced CU totals page, correct Economics row retrieved | Partially accurate — correct per scraped source data; planning.md expected values were wrong (see Failure Case) |
-| 4   | What are the different requirements required of the Penn College Arts & Sciences curriculum? | Explains the 5 requirements: General Education (sectors + foundational approaches), the Major, Electives, and the A&S CU minimum | Correctly identifies the 5-requirement structure, names General Education, Arts & Sciences Requirement, Electives, and Sectors; omits Foundational Approaches by name and does not describe the Major requirement | Relevant | Partially accurate |
-| 5   | What are the foundational approaches requirements in the UPenn College curriculum? | Describes all 6 named Foundational Approaches | Lists all 6 approaches (Writing, Formal Reasoning and Analysis, Quantitative Data Analysis, Cross-Cultural Analysis, Cultural Diversity in the U.S., Language) but incorrectly prefaces the answer with "I don't have enough information in my sources" before listing them | Relevant — URL boost pulled foundational-approaches page chunks | Partially accurate |
+| 1   | What are the sector requirements in the UPenn College curriculum? | Describes all 7 sectors by name and states one course per sector is required | Correctly states students must take 7 courses, one per sector, and lists all 7: Arts and Letters, History and Tradition, Living World, Physical World, Society, Humanities and Social Sciences, Natural Sciences Across Disciplines | Relevant — URL boost surfaced all sectors-of-knowledge page chunks | Accurate |
+| 2   | Is Writing required as part of the Penn College curriculum? | Yes, describes the Writing Seminar requirement | "Yes, Writing is required. Students must take a writing seminar to fulfill the College's Writing Requirement; recommended during the first year." | Relevant | Accurate |
+| 3   | How many courses are required to graduate from UPenn with a BA in economics? | 28 A&S C.U. and 32 total C.U. (per planning.md) | "28 A&S C.U. within a total of 32–34 C.U. Since 1 C.U. = 1 course, that is 28 A&S courses and 32–34 total." | Relevant — URL boost surfaced CU totals page, Economics row retrieved | Partially accurate — matches expected A&S count; total shown as a range (32–34) rather than exact figure; see Failure Case |
+| 4   | What are the different requirements required of the Penn College Arts & Sciences curriculum? | Explains the 5 requirements: General Education (sectors + foundational approaches), the Major, Electives, and the A&S CU minimum | Correctly identifies the 5-requirement structure and names all components: A&S Requirement, General Education, Sector Requirement, Major, and Electives | Relevant | Accurate |
+| 5   | What are the foundational approaches requirements in the UPenn College curriculum? | Describes all 6 named Foundational Approaches | Lists all 6 approaches (Writing, Formal Reasoning and Analysis, Quantitative Data Analysis, Cross-Cultural Analysis, Cultural Diversity in the U.S., Language) but adds an unnecessary caveat that "specific requirements are not listed" before enumerating them | Relevant — URL boost pulled foundational-approaches page chunks | Partially accurate |
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
@@ -98,19 +98,19 @@ All five test questions were run through the live pipeline. Questions 1, 2, 4, a
 
 **Question that failed:**
 
-Q3 — "How many courses are required to graduate from UPenn with a BA in economics?"
+Q5 — "What are the foundational approaches requirements in the UPenn College curriculum?"
 
 **What the system returned:**
 
-The system retrieved the correct source page (`arts-and-sciences-cu-total`) via the URL boost and found the Economics row. The 70b model answered: *"29 A&S C.U. and 36 total C.U."* This is consistent with the scraped HTML. However, `planning.md` listed the expected answer as *28 A&S C.U. and 32 total C.U.*
-
-A secondary failure occurred when running Q3 with the smaller 8b model: it returned *"28–32 C.U."* (a range) instead of the specific Economics row values, conflating multiple majors' data into a single answer.
+The system correctly listed all 6 Foundational Approaches (Writing, Formal Reasoning and Analysis, Quantitative Data Analysis, Cross-Cultural Analysis, Cultural Diversity in the U.S., Language), but prefaced the answer with: *"the specific requirements are not listed in [1]"* — a contradictory disclaimer that appears before the correct enumeration.
 
 **Root cause (tied to a specific pipeline stage):**
 
-The primary failure is a **planning-stage ground-truth error**: the numbers in `planning.md` were written from memory before the pages were fetched; the actual HTML table shows Economics as 29/36. The RAG pipeline faithfully returns the source's values, so the system is technically correct and the benchmark is wrong.
+This is a **generation-stage** failure caused by how the foundational approaches content is distributed across chunks. The URL boost map surfaces all chunks from the foundational-approaches page, but the introductory chunk (labeled [1] by the prompt builder) describes the approaches only at a high level without naming them. The model reads [1] first and concludes the context is insufficient — then encounters chunks [2]–[7] which contain the individual approach names and correctly lists them. The result is a self-contradictory answer: the model says it lacks information and then provides the information. The issue is that the prompt orders chunks by page-first (boosted), then semantic rank — the introductory chunk consistently ranks first and anchors the model's initial "insufficient context" judgment before the specific chunks are read.
 
-The secondary failure (8b model returning a range) is a **generation-stage** failure: the smaller model did not follow Rule 7 (exact major name matching) and instead generalized across multiple rows in the CU table rather than isolating the Economics row. The 70b model handled this extraction correctly. The root cause is that the CU table is embedded as prose in a single large chunk — the model must parse tabular data from free-text context, which is harder for smaller models.
+**What you would change to fix it:**
+
+Re-order the boosted chunks by cosine similarity score rather than by page order, so the most semantically relevant chunk (the one naming the specific approaches) appears first in the prompt context. Alternatively, consolidate the foundational approaches page into fewer, larger chunks so the introduction and the named requirements appear together rather than in separate chunks.
 
 **What you would change to fix it:**
 
