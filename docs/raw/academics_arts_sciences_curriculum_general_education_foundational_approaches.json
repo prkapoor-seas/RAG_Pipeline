@@ -1,0 +1,42 @@
+{
+  "url": "https://www.college.upenn.edu/academics/arts-sciences-curriculum/general-education/foundational-approaches",
+  "source": "local",
+  "title": "Foundational Approaches | College of Arts & Sciences",
+  "sections": [
+    {
+      "heading": "Foundational Approaches",
+      "level": 1,
+      "text": "The General Education component of the Curriculum is comprised of two elements: Foundational Approaches and Sectors of Knowledge. Foundational Approaches develop key intellectual capabilities demanded in a variety of disciplines. To find courses, go to Path@Penn->Search & Register for Courses. From the course search scroll down to the bottom and in the Course Attribute drop down, enter the name of any of the General Education requirements below to find courses that fulfill that requirement e.g. Cultural Diversity in the US or History and Tradition. Policies Governing Foundational Approaches"
+    },
+    {
+      "heading": "Writing",
+      "level": 2,
+      "text": "The ability to express oneself clearly and persuasively in writing is fundamental for success across all academic disciplines, and throughout one's personal and professional life. For these reasons, writing plays a central role within the College curriculum. Students must take a writing seminar to fulfill the College's Writing Requirement. It is recommended that students take this course during their first year of study. Students are also encouraged to continue development of their writing skills by participating in Penn's writing programs. Explore Courses Fulfilling the Writing Approach"
+    },
+    {
+      "heading": "Language",
+      "level": 2,
+      "text": "Competence in more than one language is important for participation in the global community. Language study encourages us to understand and appreciate cultural difference, and nothing brings this more sharply into focus than the experience of learning of another language. It not only affords unique access to a different culture and its ways of life and thought; language study also increases awareness of one's own language and culture. For this reason, College students are required to attain a certain degree of competency. While students often opt to satisfy the Language Requirement by continuing to study the language that they have already begun in high school or earlier, the wealth of languages that the University offers is such that many students decide to explore a new culture and area of our globe by beginning a language that they have never studied before. French, Spanish, and a few other languages are taught at the pre-collegiate level, but students are less likely to have been exposed to Arabic, Hindi or Japanese—let alone Uzbek or Hausa—and each of these languages is a mode of access to a fascinating culture and history."
+    },
+    {
+      "heading": "Quantitative Data Analysis",
+      "level": 2,
+      "text": "In contemporary society, citizenship, work and personal decision-making all require sophisticated thinking about quantitative evidence. Students in the College must complete a course that uses mathematical or statistical analysis of quantitative data as an important method for understanding another subject. Through such study, students learn to think critically about quantitative data and the inferences that can be drawn from these data. They also gain experience with the use of quantitative analysis to interpret empirical data and to test hypotheses. Courses in calculus and computer science do not fulfill the requirement because these courses do not require students to analyze actual data sets with the goal of evaluating hypotheses or interpreting results. To count toward the Quantitative Data Analysis Requirement, a course must include such data analysis."
+    },
+    {
+      "heading": "Formal Reasoning and Analysis",
+      "level": 2,
+      "text": "In contrast to Quantitative Data Analysis courses, which deal with inductive reasoning, courses designated for this requirement focus on deductive reasoning and the formal structure of human thought, including its linguistic, logical and mathematical constituents. These courses emphasize mathematical and logical thinking and reasoning about formal structures and their application to the investigation of real-world phenomena. In addition to courses in mathematics, this requirement includes courses in computer science, formal linguistics, symbolic logic and decision theory."
+    },
+    {
+      "heading": "Cross-Cultural Analysis",
+      "level": 2,
+      "text": "In our increasingly interconnected world, the Cross-Cultural Analysis Requirement aims to increase students' knowledge and understanding of socio-cultural systems outside the United States. College students are required to take at least one course to develop their ability to understand and interpret the cultures of peoples with histories outside of the United States. The focus may be on the past or the present and it should expose students to distinctive sets of values, attitudes and methods of organizing experience that may not be obtained from U.S. cultures. This exposure to the internal dynamic of another society should lead students to understand the values and practices that define their own cultural framework."
+    },
+    {
+      "heading": "Cultural Diversity in the U.S.",
+      "level": 2,
+      "text": "The Cultural Diversity in the U.S. Requirement complements the Cross-Cultural Analysis Requirement and aims to develop students’ knowledge of the history, dynamic cultural systems and the many populations that make up the heterogeneous cultures of the United States. College students are required to take at least one course to develop the skills necessary for understanding the population and culture of the United States as it becomes increasingly diverse. Through historical inquiry, the study of cultural expressions and the analysis of social data, students will develop their ability to examine issues of diversity with a focus on race, ethnicity, gender, sexuality, class and religion. The goal is to equip graduates with the ability to become perceptive and engaged members of society."
+    }
+  ]
+}

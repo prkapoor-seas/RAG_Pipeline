@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://www.college.upenn.edu/academics/arts-sciences-curriculum",
+    "file": "docs/raw/academics_arts_sciences_curriculum.json",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.college.upenn.edu/academics/arts-sciences-curriculum/general-education-curriculum",
+    "file": "docs/raw/academics_arts_sciences_curriculum_general_education_curriculum.json",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.college.upenn.edu/academics/arts-sciences-curriculum/general-education/sectors-knowledge",
+    "file": "docs/raw/academics_arts_sciences_curriculum_general_education_sectors_knowledge.json",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.college.upenn.edu/academics/arts-sciences-curriculum/general-education/foundational-approaches",
+    "file": "docs/raw/academics_arts_sciences_curriculum_general_education_foundational_approaches.json",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.college.upenn.edu/advising-resources/policies-and-procedures/policies-governing-curriculum/policies-governing-sector-requirement",
+    "file": "docs/raw/advising_resources_policies_and_procedures_policies_governing_curriculum_policies_governing_sector_requirement.json",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.college.upenn.edu/academics/arts-and-sciences-curriculum/major",
+    "file": "docs/raw/academics_arts_and_sciences_curriculum_major.json",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.college.upenn.edu/advising-resources/policies-and-procedures/policies-governing-curriculum/arts-and-sciences-cu-total",
+    "file": "docs/raw/advising_resources_policies_and_procedures_policies_governing_curriculum_arts_and_sciences_cu_total.json",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.college.upenn.edu/academics/arts-sciences-curriculum/electives",
+    "file": "docs/raw/academics_arts_sciences_curriculum_electives.json",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.college.upenn.edu/advising-resources/policies-and-procedures/policies-governing-curriculum/policies-governing-electives",
+    "file": "docs/raw/advising_resources_policies_and_procedures_policies_governing_curriculum_policies_governing_electives.json",
+    "status": "ok"
+  },
+  {
+    "url": "https://www.college.upenn.edu/advising-resources/policies-and-procedures/policies-governing-curriculum/policies-governing-arts-sciences-courses",
+    "file": "docs/raw/advising_resources_policies_and_procedures_policies_governing_curriculum_policies_governing_arts_sciences_courses.json",
+    "status": "ok"
+  }
+]

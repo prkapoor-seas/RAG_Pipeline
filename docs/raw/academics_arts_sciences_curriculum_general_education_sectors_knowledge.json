@@ -1,0 +1,47 @@
+{
+  "url": "https://www.college.upenn.edu/academics/arts-sciences-curriculum/general-education/sectors-knowledge",
+  "source": "local",
+  "title": "Sectors of Knowledge | College of Arts & Sciences",
+  "sections": [
+    {
+      "heading": "Sectors of Knowledge",
+      "level": 1,
+      "text": "The General Education component of the Curriculum is comprised of two elements: Foundational Approaches and Sectors of Knowledge. Sectors of Knowledge allow you to tailor your own education in the arts and sciences while gaining valuable knowledge across a broad range of disciplines To find courses, go to Path@Penn->Search & Register for Courses. From the course search scroll down to the bottom and in the Course Attribute drop down, enter the name of any of the General Education requirements below to find courses that fulfill that requirement e.g. Society or Living World or History and Tradition. Policies Governing the Sector Requirement"
+    },
+    {
+      "heading": "Society",
+      "level": 2,
+      "text": "This sector focuses on the structure and norms of contemporary human society, including their psychological and cultural dimensions. Courses in this sector use many analytical techniques that have been developed to study contemporary society, with its complex relations between individuals and larger forms of mass participation. Some Society courses are largely devoted to the analysis of aggregate forms of human behavior (encounters, markets, civil society, nations, supranational organizations, and so on), while others may focus on the relations between individuals and their various societies. While historical materials may be studied, the primary objective of Society courses is to enable students to develop concepts and principles, test theories, and perfect tools that can be used to interpret, explain and evaluate the behavior of human beings in contemporary societies. This objective will be realized through the specific content of the various courses, but the emphasis in each course should be on developing in students a general capacity for social analysis and understanding."
+    },
+    {
+      "heading": "History and Tradition",
+      "level": 2,
+      "text": "This sector focuses on studies of continuity and change in human thought, belief and action. Understanding both ancient and modern civilizations provides students with an essential perspective on contemporary life. Courses in this sector examine the histories of diverse civilizations, their cultures and forms of expression, their formal and informal belief systems and ideologies, and the record of their human actors. Students should learn to interpret primary sources, identify and discuss their core intellectual issues, understand the social contexts in which these sources were created, pose questions about their validity and ability to represent broader perspectives and utilize them when writing persuasive essays."
+    },
+    {
+      "heading": "Arts and Letters",
+      "level": 2,
+      "text": "This sector encompasses the means and meaning of visual arts, literature and music, together with the criticism surrounding them. Most courses in this sector are concerned with works of creativity—paintings, films, poetry, fiction, theatre, dance and music. They generally address a considerable breadth of material rather than an individual work or artist. The objective of Arts and Letters courses is to confront students with works of creativity; cultivate their powers of perception (visual, textual, auditory); and equip them with tools for analysis, interpretation and criticism. This objective will be realized through the specific content of the various courses, but the emphasis in each course should be on developing and strengthening in students a general capacity for understanding meaning and the ways in which it is achieved in its distinctive environment of culture and moment."
+    },
+    {
+      "heading": "Humanities and Social Sciences",
+      "level": 2,
+      "text": "This sector comprises courses that combine methods and approaches at work in at least two of the first three sectors. Students will engage with diverse approaches to society, history, tradition and the arts more deeply than a single course from each domain can allow. Greater depth of experience is gained by bringing to bear several humanistic and social scientific perspectives upon a single issue or topic or by engaging directly in academically-based service or performance informed by these perspectives. In this sector, students seek to broaden their perspective by taking a course in the humanities or social sciences that has been approved as a general education course but that cuts across two or more of sectors I, II, and III. Some courses approved for this sector will seek a more integrative approach by addressing a problem or topic from a variety of disciplinary perspectives. Others will combine disciplinary study with community service or activism, and constructively and reflectively connect the theoretical with the actual. Finally, some courses in the arts that combine creative or performance experience with reflection and grounding within a discipline may be found in this sector."
+    },
+    {
+      "heading": "Living World",
+      "level": 2,
+      "text": "This sector deals substantively with the evolution, development, structure and/or function of living systems. Courses in this sector study the variety of approaches that are useful in understanding the diversity of living organisms, their interrelatedness, and their interactions with their environment. Analytical approaches employed range from analyses at the molecular and cellular level, to analyses of the cognitive and neural bases of behavior, to analyses of evolutionary processes and ecological systems. Students learn the methods used by contemporary natural science to study these topics, including ways in which hypotheses are developed, tested, and reformulated in light of new research findings. A full understanding of living organisms incorporates insights from approaches at many different levels."
+    },
+    {
+      "heading": "Physical World",
+      "level": 2,
+      "text": "This sector focuses on the methodology and concepts of physical science. Courses in this sector aim to provide insight into the content and workings of modern physical science. Some courses in this sector are part of a major, while others are designed primarily to provide an introduction to the field for non-science majors. Courses for non-science majors may include some discussion of the historical development of the subject as well as the most important conceptual notions and their mathematical expressions. All courses in this sector seek to demonstrate the generally accepted paradigm of modern science: experiment and observation suggest mathematically formulated theories, which are then tested by comparison with new experiments and observations. Some courses in this sector use a mathematical prerequisite (advanced high school algebra through introductory calculus) - that is, students will actually be expected to use mathematical methods and concepts to achieve an understanding of subjects in physical science."
+    },
+    {
+      "heading": "Natural Sciences Across Disciplines (formerly Natural Sciences and Mathematics)",
+      "level": 2,
+      "text": "Students will engage with diverse perspectives generated by applying the principles of the natural sciences to broader applications. Courses in this sector emphasize the interrelationships and synergies gained from bringing together different perspectives in the form of: 1) two or more distinctive scientific disciplines (not just one discipline applied to a topic from another scientific field), 2) natural science and mathematics, or 3) natural science and societal issues. The sector includes some intermediate and advanced courses that may be of special interest to STEM majors."
+    }
+  ]
+}
